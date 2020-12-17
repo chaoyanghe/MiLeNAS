@@ -1,4 +1,4 @@
-# MiLeNAS: Efficient Neural Architecture Search via Mixed-level Reformulation
+# MiLeNAS: Efficient Neural Architecture Search via Mixed-level Reformulation (CVPR'2020)
 This is the source code for the following paper:
 ```
 @inproceedings{he2020milenas,
@@ -72,7 +72,7 @@ If you use any part of this code in your research, please cite our paper:
   year={2020}
 }
 ```
-We also publish FedNAS, a neural architecture search method for federated deep learning, please also cite if it is related to your research:
+We also published FedNAS, a neural architecture search method for federated deep learning, please also cite if it is related to your research:
 ```
 @inproceedings{FedNAS,
   title={FedNAS: Federated Deep Learning via Neural Architecture Search},
