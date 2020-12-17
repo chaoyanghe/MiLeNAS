@@ -1,0 +1,23 @@
+2020-12-17 01:43:37,660 INFO    MainThread:612853 [wandb_setup.py:_flush():70] setting env: {}
+2020-12-17 01:43:37,660 INFO    MainThread:612853 [wandb_setup.py:_flush():70] multiprocessing start_methods=fork,spawn,forkserver
+2020-12-17 01:43:37,661 INFO    MainThread:612853 [wandb_setup.py:_flush():70] setting login settings: {}
+2020-12-17 01:43:37,661 INFO    MainThread:612853 [wandb_init.py:_log_setup():303] Logging user logs to /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_014337-2jyjdy15/logs/debug.log
+2020-12-17 01:43:37,661 INFO    MainThread:612853 [wandb_init.py:_log_setup():304] Logging internal logs to /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_014337-2jyjdy15/logs/debug-internal.log
+2020-12-17 01:43:37,688 WARNING MainThread:612853 [wandb_init.py:init():595] interrupted
+Traceback (most recent call last):
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 575, in init
+    run = wi.init()
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/wandb/sdk/wandb_init.py", line 400, in init
+    ret = backend.interface.communicate_check_version(
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 615, in communicate_check_version
+    result = self._communicate(rec)
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 447, in _communicate
+    return future.get(timeout)
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/wandb/sdk/interface/interface.py", line 63, in get
+    is_set = self._object_ready.wait(timeout)
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/threading.py", line 558, in wait
+    signaled = self._cond.wait(timeout)
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/threading.py", line 306, in wait
+    gotit = waiter.acquire(True, timeout)
+KeyboardInterrupt
+2020-12-17 01:43:37,693 INFO    MainThread:612853 [internal.py:handle_exit():138] Internal process exited

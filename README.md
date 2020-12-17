@@ -2,7 +2,7 @@
 This is the source code for the following paper:
 ```
 @inproceedings{he2020milenas,
-  title={Milenas: Efficient neural architecture search via mixed-level reformulation},
+  title={MiLeNAS: Efficient neural architecture search via mixed-level reformulation},
   author={He, Chaoyang and Ye, Haishan and Shen, Li and Zhang, Tong},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   pages={11993--12002},
@@ -10,6 +10,9 @@ This is the source code for the following paper:
 }
 ```
 
+![MiLeNAS](docs/MiLeNAS.png)
+
+Arxiv link: https://arxiv.org/abs/2003.12238
 
 ## Installation
 For Linux OS:
@@ -36,12 +39,40 @@ For CIFAR10, it will be automatically downloaded.
 For ImageNet, please download it manually and set the path accordingly.
 
 ## Architecture Search
-To carry out architecture search using 2nd-order approximation, run
+MiLeNAS:
 ```
-cd cnn && python train_search.py --unrolled     # for conv cells on CIFAR-10
-cd rnn && python train_search.py --unrolled     # for recurrent cells on PTB
+CUDA_VISIBLE_DEVICES=0 ./search_algorithm/run_milenas.sh "0" 200003 1 50 "saved_models" 0.025 0.0003 2021 8
 ```
 
+DARTS (2nd):
+```
+CUDA_VISIBLE_DEVICES=0 sh search_algorithm/run_darts.sh "0" 77700 1 1 50 8 "saved_models" 1 0
+```
+
+Single Level Optimization:
+```
+CUDA_VISIBLE_DEVICES=0 sh search_algorithm/run_single_level.sh "0" 77723 1 50 8 "saved_models" 0.025 2
+```
+
+GDAS:
+```
+CUDA_VISIBLE_DEVICES=0 sh search_algorithm/run_gdas.sh "0" 0.025 0.001 0.0003 8
+```
+
+MiLeNAS (2nd):
+```
+CUDA_VISIBLE_DEVICES=0 sh search_algorithm/run_milenas_2nd.sh "0" 307 1 1 50 8 "saved_models"
+```
+
+MiLeNAS + GDAS (this integration can largely save the memory cost and also accelerate the searching)
+```
+CUDA_VISIBLE_DEVICES=0 sh search_algorithm/run_milenas_and_gdas.sh "0" 0.025 0.001 0.0003 8
+```
+
+MiLeNAS run at the later phase of DARTS:
+```
+CUDA_VISIBLE_DEVICES=0 sh search_algorithm/run_milenas_later_phase_of_bilevel.sh "0" 77763 1 50 8 "saved_models" 0.025 0.0003 6
+```
 
 ## Architecture Evaluation (Training the searched model from scratch)
 To evaluate our best cells by training from scratch, run
@@ -52,7 +83,10 @@ CUDA_VISIBLE_DEVICES=0 sh evaluation/run_eval_cifar10.sh "0" GDAS_MIXED_LEVEL2 6
 # ImageNet
 CUDA_VISIBLE_DEVICES=0 sh evaluation/run_eval_imagenet.sh "0" GDAS_MIXED_LEVEL2 6000 0.030 /home/chaoyanghe/sourcecode/dataset/cv/ImageNet
 ```
-Please change the `--arch` in `evaluation/run_eval_imagenet.sh` and `evaluation/run_eval_cifar10.sh`, 'arch' is defined at `genotypes.py`
+Please change:
+ 
+1. the `--arch` in `evaluation/run_eval_imagenet.sh` and `evaluation/run_eval_cifar10.sh`, 'arch' is defined at `genotypes.py`
+2. the ImageNet data path.
 
 
 ## Visualization
@@ -65,7 +99,7 @@ where `GDAS_MIXED_LEVEL2` is the architecture defined in `genotypes.py`.
 If you use any part of this code in your research, please cite our paper:
 ```
 @inproceedings{he2020milenas,
-  title={Milenas: Efficient neural architecture search via mixed-level reformulation},
+  title={MiLeNAS: Efficient neural architecture search via mixed-level reformulation},
   author={He, Chaoyang and Ye, Haishan and Shen, Li and Zhang, Tong},
   booktitle={Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition},
   pages={11993--12002},

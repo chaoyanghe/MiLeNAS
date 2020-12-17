@@ -1,0 +1,49 @@
+2020-12-17 01:35:09.528 INFO:	gpus = [2]
+2020-12-17 01:35:09.614 INFO:	gpu device = 2
+2020-12-17 01:35:09.614 INFO:	args = Namespace(arch_learning_rate=0.0003, arch_search_method='DARTS', arch_weight_decay=0.001, batch_size=64, cutout=False, cutout_length=16, data='../data', drop_path_prob=0.3, epochs=50, gpu='2', grad_clip=5, init_channels=16, lambda_train_regularizer=1.0, lambda_valid_regularizer=1.0, layers=8, learning_rate=0.025, learning_rate_min=0.001, model_path='saved_models', momentum=0.9, optimization='V2_2ndOrder', report_freq=50, run_id=307, save='search-EXP-20201217-013508', seed=2, train_portion=0.5, unrolled=True, weight_decay=0.0003)
+2020-12-17 01:35:11.482 INFO:	param size = 1.930842MB
+Files already downloaded and verified
+/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:508: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+2020-12-17 01:35:12.141 INFO:	epoch 0 lr 2.500000e-02
+/home/chaoyanghe/sourcecode/MiLeNAS/search_algorithm/architect.py:48: UserWarning: This overload of sub is deprecated:
+	sub(Number alpha, Tensor other)
+Consider using one of the following signatures instead:
+	sub(Tensor other, *, Number alpha) (Triggered internally at  /opt/conda/conda-bld/pytorch_1607369981906/work/torch/csrc/utils/python_arg_parser.cpp:882.)
+  unrolled_model = self._construct_model_from_theta(theta.sub(eta, moment + dtheta))
+2020-12-17 01:35:19.136 INFO:	train 000 2.475821e+00 9.375000 43.750000
+Traceback (most recent call last):
+Traceback (most recent call last):
+  File "./search_algorithm/train_milenas_2nd.py", line 318, in <module>
+    main()
+  File "./search_algorithm/train_milenas_2nd.py", line 177, in main
+    train_acc, train_obj = train(epoch, train_queue, valid_queue, model, architect, criterion, optimizer, lr)
+  File "./search_algorithm/train_milenas_2nd.py", line 259, in train
+    architect.step_milenas_2ndorder(input, target, input_search, target_search, lr, optimizer,
+  File "/home/chaoyanghe/sourcecode/MiLeNAS/search_algorithm/architect.py", line 273, in step_milenas_2ndorder
+    unrolled_model = self._compute_unrolled_model(input_train, target_train, eta, network_optimizer)
+  File "/home/chaoyanghe/sourcecode/MiLeNAS/search_algorithm/architect.py", line 48, in _compute_unrolled_model
+    unrolled_model = self._construct_model_from_theta(theta.sub(eta, moment + dtheta))
+  File "/home/chaoyanghe/sourcecode/MiLeNAS/search_algorithm/architect.py", line 205, in _construct_model_from_theta
+    model_new = self.model.new()
+  File "/home/chaoyanghe/sourcecode/MiLeNAS/search_space/model_search.py", line 213, in new
+    model_new = Network(self._C, self._num_classes, self._layers, self._criterion).cuda()
+  File "/home/chaoyanghe/sourcecode/MiLeNAS/search_space/model_search.py", line 202, in __init__
+    cell = Cell(steps, multiplier, C_prev_prev, C_prev, C_curr, reduction, reduction_prev)
+  File "/home/chaoyanghe/sourcecode/MiLeNAS/search_space/model_search.py", line 46, in __init__
+    op = MixedOp(C, stride)
+  File "/home/chaoyanghe/sourcecode/MiLeNAS/search_space/model_search.py", line 17, in __init__
+    op = OPS[primitive](C, stride, False)
+  File "/home/chaoyanghe/sourcecode/MiLeNAS/search_space/operations.py", line 9, in <lambda>
+    'sep_conv_3x3': lambda C, stride, affine: SepConv(C, C, 3, stride, 1, affine=affine),
+  File "/home/chaoyanghe/sourcecode/MiLeNAS/search_space/operations.py", line 61, in __init__
+    nn.BatchNorm2d(C_in, affine=affine),
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 94, in __init__
+    super(_BatchNorm, self).__init__(
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/torch/nn/modules/batchnorm.py", line 33, in __init__
+    super(_NormBase, self).__init__()
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/torch/nn/modules/module.py", line 233, in __init__
+    self._backward_hooks = OrderedDict()
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/torch/nn/modules/module.py", line 782, in __setattr__
+    def remove_from(*dicts_or_sets):
+KeyboardInterrupt

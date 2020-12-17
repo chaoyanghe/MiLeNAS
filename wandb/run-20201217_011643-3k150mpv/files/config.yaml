@@ -1,0 +1,94 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.10.12
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.8.5
+arch_learning_rate:
+  desc: null
+  value: 0.0003
+arch_search_method:
+  desc: null
+  value: DARTS
+arch_weight_decay:
+  desc: null
+  value: 0.001
+batch_size:
+  desc: null
+  value: 64
+cutout:
+  desc: null
+  value: false
+cutout_length:
+  desc: null
+  value: 16
+data:
+  desc: null
+  value: ../data
+drop_path_prob:
+  desc: null
+  value: 0.3
+epochs:
+  desc: null
+  value: 50
+gpu:
+  desc: null
+  value: '1'
+grad_clip:
+  desc: null
+  value: 5
+group_id:
+  desc: null
+  value: 1
+init_channels:
+  desc: null
+  value: 16
+lambda_train_regularizer:
+  desc: null
+  value: 1.0
+lambda_valid_regularizer:
+  desc: null
+  value: 1.0
+layers:
+  desc: null
+  value: 8
+learning_rate:
+  desc: null
+  value: 0.025
+learning_rate_min:
+  desc: null
+  value: 0.001
+model_path:
+  desc: null
+  value: saved_models
+momentum:
+  desc: null
+  value: 0.9
+optimization:
+  desc: null
+  value: DARTS
+report_freq:
+  desc: null
+  value: 50
+run_id:
+  desc: null
+  value: 77715
+save:
+  desc: null
+  value: search-EXP-20201217-011642
+seed:
+  desc: null
+  value: 2
+train_portion:
+  desc: null
+  value: 0.5
+unrolled:
+  desc: null
+  value: 1
+weight_decay:
+  desc: null
+  value: 0.0003

@@ -1,0 +1,74 @@
+2020-12-17 01:47:40,813 INFO    MainThread:614482 [internal.py:wandb_internal():63] W&B internal server running at pid: 614482
+2020-12-17 01:47:40,816 DEBUG   HandlerThread:614482 [handler.py:handle_request():55] handle_request: check_version
+2020-12-17 01:47:40,816 INFO    WriterThread:614482 [datastore.py:open_for_write():76] open: /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_014740-g5ld7xc7/run-g5ld7xc7.wandb
+2020-12-17 01:47:40,817 DEBUG   SenderThread:614482 [sender.py:send():90] send: header
+2020-12-17 01:47:40,818 DEBUG   SenderThread:614482 [sender.py:send():90] send: request
+2020-12-17 01:47:40,818 DEBUG   SenderThread:614482 [sender.py:send_request():99] send_request: check_version
+2020-12-17 01:47:40,821 DEBUG   Thread-4  :614482 [connectionpool.py:_new_conn():971] Starting new HTTPS connection (1): pypi.org:443
+2020-12-17 01:47:40,942 DEBUG   Thread-4  :614482 [connectionpool.py:_make_request():452] https://pypi.org:443 "GET /pypi/wandb/json HTTP/1.1" 200 52216
+2020-12-17 01:47:40,990 DEBUG   SenderThread:614482 [sender.py:send():90] send: run
+2020-12-17 01:47:41,009 DEBUG   SenderThread:614482 [cmd.py:execute():718] Popen(['git', 'cat-file', '--batch-check'], cwd=/home/chaoyanghe/sourcecode/MiLeNAS, universal_newlines=False, shell=None, istream=<valid stream>)
+2020-12-17 01:47:41,030 DEBUG   SenderThread:614482 [connectionpool.py:_new_conn():971] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-17 01:47:41,687 DEBUG   SenderThread:614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-17 01:47:41,694 INFO    SenderThread:614482 [dir_watcher.py:__init__():165] watching files in: /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_014740-g5ld7xc7/files
+2020-12-17 01:47:41,694 INFO    SenderThread:614482 [sender.py:_start_run_threads():487] run started: g5ld7xc7 with start time 1608198460
+2020-12-17 01:47:41,695 DEBUG   SenderThread:614482 [sender.py:send():90] send: summary
+2020-12-17 01:47:41,696 INFO    SenderThread:614482 [sender.py:_save_file():568] saving file wandb-summary.json with policy end
+2020-12-17 01:47:41,696 DEBUG   HandlerThread:614482 [handler.py:handle_request():55] handle_request: run_start
+2020-12-17 01:47:41,713 DEBUG   HandlerThread:614482 [cmd.py:execute():718] Popen(['git', 'cat-file', '--batch-check'], cwd=/home/chaoyanghe/sourcecode/MiLeNAS, universal_newlines=False, shell=None, istream=<valid stream>)
+2020-12-17 01:47:41,723 DEBUG   HandlerThread:614482 [cmd.py:execute():718] Popen(['git', 'rev-parse', '--show-toplevel'], cwd=/home/chaoyanghe/sourcecode/MiLeNAS, universal_newlines=False, shell=None, istream=None)
+2020-12-17 01:47:41,737 DEBUG   SenderThread:614482 [sender.py:send():90] send: files
+2020-12-17 01:47:41,737 INFO    SenderThread:614482 [sender.py:_save_file():568] saving file wandb-metadata.json with policy now
+2020-12-17 01:47:41,746 DEBUG   Thread-11 :614482 [connectionpool.py:_new_conn():971] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-17 01:47:41,746 DEBUG   HandlerThread:614482 [handler.py:handle_request():55] handle_request: status
+2020-12-17 01:47:41,747 DEBUG   SenderThread:614482 [sender.py:send():90] send: request
+2020-12-17 01:47:41,747 DEBUG   SenderThread:614482 [sender.py:send_request():99] send_request: status
+2020-12-17 01:47:41,751 DEBUG   SenderThread:614482 [connectionpool.py:_new_conn():971] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-17 01:47:41,950 DEBUG   SenderThread:614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-17 01:47:41,964 DEBUG   Thread-11 :614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-17 01:47:41,985 DEBUG   Thread-11 :614482 [connectionpool.py:_new_conn():971] Starting new HTTPS connection (1): storage.googleapis.com:443
+2020-12-17 01:47:42,602 DEBUG   Thread-11 :614482 [connectionpool.py:_make_request():452] https://storage.googleapis.com:443 "PUT /wandb-production.appspot.com/automl/automl-gradient-based-nas/g5ld7xc7/wandb-metadata.json?Expires=1608284861&GoogleAccessId=wandb-production%40appspot.gserviceaccount.com&Signature=H1fQVx6YczWAAGK5NTwyEpTB2svoM%2FLU43ogsDDhrdWTyRxuaTe3XphuXM1AzyKIT21tN1ROyiuJnCmjGlXpcobFTKxoFqOcsW8TjnPirWjVGEtoNzQX1Kls5FNqLjoIGtM0eKszY8AH1X%2F73ODd2ttNyMaWcQ72J6PWSTd2x%2FQgKSUSjA1vlBkdiGlXs1ilXzCgNd1wjHiw4v156hBaQNJ9DjBbouDde5nzmUgikvuvbgBaCkHvrlVjrtEZXmY5l6B8vULcagiajuRUL%2FqHwF0R9Cec73tZv%2BokFec2ohk0IbH9rQxspqvKZDe70no5hiqLeuRhPrxUGiqKDPOY%2Bg%3D%3D HTTP/1.1" 200 0
+2020-12-17 01:47:42,605 INFO    Thread-11 :614482 [upload_job.py:push():131] Uploaded file /tmp/tmp1jhd4ie8wandb/17h3v5nx-wandb-metadata.json
+2020-12-17 01:47:42,697 INFO    Thread-8  :614482 [dir_watcher.py:_on_file_created():213] file/dir created: /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_014740-g5ld7xc7/files/requirements.txt
+2020-12-17 01:47:42,698 INFO    Thread-8  :614482 [dir_watcher.py:_on_file_created():213] file/dir created: /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_014740-g5ld7xc7/files/output.log
+2020-12-17 01:47:42,698 INFO    Thread-8  :614482 [dir_watcher.py:_on_file_created():213] file/dir created: /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_014740-g5ld7xc7/files/wandb-metadata.json
+2020-12-17 01:47:43,695 INFO    Thread-8  :614482 [dir_watcher.py:_on_file_modified():226] file/dir modified: /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_014740-g5ld7xc7/files/output.log
+2020-12-17 01:47:43,897 DEBUG   Thread-5  :614482 [connectionpool.py:_new_conn():971] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-17 01:47:44,120 DEBUG   Thread-5  :614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /files/automl/automl-gradient-based-nas/g5ld7xc7/file_stream HTTP/1.1" 200 None
+2020-12-17 01:47:44,695 INFO    Thread-8  :614482 [dir_watcher.py:_on_file_modified():226] file/dir modified: /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_014740-g5ld7xc7/files/output.log
+2020-12-17 01:47:45,335 DEBUG   SenderThread:614482 [sender.py:send():90] send: stats
+2020-12-17 01:47:46,407 DEBUG   Thread-5  :614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /files/automl/automl-gradient-based-nas/g5ld7xc7/file_stream HTTP/1.1" 200 None
+2020-12-17 01:47:46,696 INFO    Thread-8  :614482 [dir_watcher.py:_on_file_modified():226] file/dir modified: /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_014740-g5ld7xc7/files/output.log
+2020-12-17 01:47:49,997 DEBUG   SenderThread:614482 [sender.py:send():90] send: stats
+2020-12-17 01:47:50,119 DEBUG   Thread-5  :614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /files/automl/automl-gradient-based-nas/g5ld7xc7/file_stream HTTP/1.1" 200 None
+2020-12-17 01:47:54,654 DEBUG   SenderThread:614482 [sender.py:send():90] send: stats
+2020-12-17 01:47:54,769 DEBUG   Thread-5  :614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /files/automl/automl-gradient-based-nas/g5ld7xc7/file_stream HTTP/1.1" 200 None
+2020-12-17 01:47:56,956 DEBUG   HandlerThread:614482 [handler.py:handle_request():55] handle_request: status
+2020-12-17 01:47:56,956 DEBUG   SenderThread:614482 [sender.py:send():90] send: request
+2020-12-17 01:47:56,956 DEBUG   SenderThread:614482 [sender.py:send_request():99] send_request: status
+2020-12-17 01:47:56,958 DEBUG   SenderThread:614482 [connectionpool.py:_new_conn():971] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-17 01:47:57,193 DEBUG   SenderThread:614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-17 01:47:59,287 DEBUG   SenderThread:614482 [sender.py:send():90] send: stats
+2020-12-17 01:47:59,416 DEBUG   Thread-5  :614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /files/automl/automl-gradient-based-nas/g5ld7xc7/file_stream HTTP/1.1" 200 None
+2020-12-17 01:48:03,939 DEBUG   SenderThread:614482 [sender.py:send():90] send: stats
+2020-12-17 01:48:04,072 DEBUG   Thread-5  :614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /files/automl/automl-gradient-based-nas/g5ld7xc7/file_stream HTTP/1.1" 200 None
+2020-12-17 01:48:08,577 DEBUG   SenderThread:614482 [sender.py:send():90] send: stats
+2020-12-17 01:48:08,708 DEBUG   Thread-5  :614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /files/automl/automl-gradient-based-nas/g5ld7xc7/file_stream HTTP/1.1" 200 None
+2020-12-17 01:48:12,198 DEBUG   HandlerThread:614482 [handler.py:handle_request():55] handle_request: status
+2020-12-17 01:48:12,198 DEBUG   SenderThread:614482 [sender.py:send():90] send: request
+2020-12-17 01:48:12,198 DEBUG   SenderThread:614482 [sender.py:send_request():99] send_request: status
+2020-12-17 01:48:12,202 DEBUG   SenderThread:614482 [connectionpool.py:_new_conn():971] Starting new HTTPS connection (1): api.wandb.ai:443
+2020-12-17 01:48:12,419 DEBUG   SenderThread:614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /graphql HTTP/1.1" 200 None
+2020-12-17 01:48:13,234 DEBUG   SenderThread:614482 [sender.py:send():90] send: stats
+2020-12-17 01:48:13,355 DEBUG   Thread-5  :614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /files/automl/automl-gradient-based-nas/g5ld7xc7/file_stream HTTP/1.1" 200 None
+2020-12-17 01:48:17,869 DEBUG   SenderThread:614482 [sender.py:send():90] send: stats
+2020-12-17 01:48:17,989 DEBUG   Thread-5  :614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /files/automl/automl-gradient-based-nas/g5ld7xc7/file_stream HTTP/1.1" 200 None
+2020-12-17 01:48:20,827 WARNING MainThread:614482 [internal.py:wandb_internal():117] Internal process interrupt: 1
+2020-12-17 01:48:20,987 WARNING MainThread:614482 [internal.py:wandb_internal():117] Internal process interrupt: 2
+2020-12-17 01:48:20,988 ERROR   MainThread:614482 [internal.py:wandb_internal():120] Internal process interrupted.
+2020-12-17 01:48:21,006 INFO    HandlerThread:614482 [handler.py:finish():271] shutting down handler
+2020-12-17 01:48:21,006 INFO    SenderThread:614482 [sender.py:finish():642] shutting down sender
+2020-12-17 01:48:21,007 INFO    WriterThread:614482 [datastore.py:close():257] close: /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_014740-g5ld7xc7/run-g5ld7xc7.wandb
+2020-12-17 01:48:21,009 INFO    SenderThread:614482 [dir_watcher.py:finish():279] shutting down directory watcher
+2020-12-17 01:48:21,130 DEBUG   Thread-5  :614482 [connectionpool.py:_make_request():452] https://api.wandb.ai:443 "POST /files/automl/automl-gradient-based-nas/g5ld7xc7/file_stream HTTP/1.1" 200 None
+2020-12-17 01:48:21,277 INFO    MainThread:614482 [internal.py:handle_exit():138] Internal process exited

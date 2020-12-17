@@ -1,0 +1,33 @@
+2020-12-17 01:39:50,390 INFO    MainThread:610733 [wandb_setup.py:_flush():70] setting env: {}
+2020-12-17 01:39:50,390 INFO    MainThread:610733 [wandb_setup.py:_flush():70] multiprocessing start_methods=fork,spawn,forkserver
+2020-12-17 01:39:50,390 INFO    MainThread:610733 [wandb_setup.py:_flush():70] setting login settings: {}
+2020-12-17 01:39:50,390 INFO    MainThread:610733 [wandb_init.py:_log_setup():303] Logging user logs to /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_013950-2n1r98um/logs/debug.log
+2020-12-17 01:39:50,391 INFO    MainThread:610733 [wandb_init.py:_log_setup():304] Logging internal logs to /home/chaoyanghe/sourcecode/MiLeNAS/wandb/run-20201217_013950-2n1r98um/logs/debug-internal.log
+2020-12-17 01:39:51,303 INFO    MainThread:610733 [wandb_run.py:_console_start():1237] atexit reg
+2020-12-17 01:39:51,304 INFO    MainThread:610733 [wandb_run.py:_redirect():1104] redirect: SettingsConsole.REDIRECT
+2020-12-17 01:39:51,305 INFO    MainThread:610733 [wandb_run.py:_redirect():1107] Redirecting console.
+2020-12-17 01:39:51,305 INFO    MainThread:610733 [redirect.py:install():204] install start
+2020-12-17 01:39:51,305 INFO    MainThread:610733 [redirect.py:install():219] install stop
+2020-12-17 01:39:51,305 INFO    MainThread:610733 [redirect.py:install():204] install start
+2020-12-17 01:39:51,306 INFO    MainThread:610733 [redirect.py:install():219] install stop
+2020-12-17 01:39:51,306 INFO    MainThread:610733 [wandb_run.py:_redirect():1151] Redirects installed.
+2020-12-17 01:39:51,312 INFO    MainThread:610733 [wandb_run.py:_config_callback():549] config_cb None None {'data': '../data', 'batch_size': 128, 'learning_rate': 0.025, 'learning_rate_min': 0.001, 'momentum': 0.9, 'weight_decay': 0.0003, 'report_freq': 50, 'gpu': '0', 'epochs': 300, 'init_channels': 16, 'layers': 8, 'model_path': 'saved_models', 'cutout': False, 'cutout_length': 16, 'drop_path_prob': 0.3, 'save': 'search-EXP-20201217-013950', 'seed': 2, 'grad_clip': 5, 'train_portion': 0.5, 'unrolled': True, 'arch_learning_rate': 0.0003, 'arch_weight_decay': 0.001, 'optimization': 'MiLeNAS', 'arch_search_method': 'GDAS', 'tau_max': 10.0, 'tau_min': 1.0, '_wandb': {'cli_version': '0.10.12', 'python_version': '3.8.5', 'is_jupyter_run': False, 'is_kaggle_kernel': False, 'framework': 'torch'}}
+2020-12-17 01:39:53,136 INFO    MainThread:610733 [wandb_watch.py:watch():35] Watching
+2020-12-17 01:40:30,797 INFO    MainThread:610733 [wandb_run.py:_atexit_cleanup():1207] got exitcode: 255
+2020-12-17 01:40:30,797 INFO    MainThread:610733 [wandb_run.py:_restore():1179] restore
+2020-12-17 01:40:30,797 INFO    MainThread:610733 [redirect.py:uninstall():223] uninstall start
+2020-12-17 01:40:30,797 INFO    MainThread:610733 [redirect.py:_stop():278] _stop: stdout
+2020-12-17 01:40:30,797 INFO    MainThread:610733 [redirect.py:_stop():284] _stop closed: stdout
+2020-12-17 01:40:30,798 INFO    stdout    :610733 [redirect.py:_pipe_relay():120] relay done saw last write: stdout
+2020-12-17 01:40:30,798 INFO    stdout    :610733 [redirect.py:_pipe_relay():136] relay done done: stdout
+2020-12-17 01:40:30,798 INFO    MainThread:610733 [redirect.py:_stop():290] _stop joined: stdout
+2020-12-17 01:40:30,798 INFO    MainThread:610733 [redirect.py:_stop():292] _stop rd closed: stdout
+2020-12-17 01:40:30,798 INFO    MainThread:610733 [redirect.py:uninstall():227] uninstall done
+2020-12-17 01:40:30,798 INFO    MainThread:610733 [redirect.py:uninstall():223] uninstall start
+2020-12-17 01:40:30,799 INFO    MainThread:610733 [redirect.py:_stop():278] _stop: stderr
+2020-12-17 01:40:30,799 INFO    MainThread:610733 [redirect.py:_stop():284] _stop closed: stderr
+2020-12-17 01:40:30,799 INFO    stderr    :610733 [redirect.py:_pipe_relay():120] relay done saw last write: stderr
+2020-12-17 01:40:30,799 INFO    stderr    :610733 [redirect.py:_pipe_relay():136] relay done done: stderr
+2020-12-17 01:40:30,799 INFO    MainThread:610733 [redirect.py:_stop():290] _stop joined: stderr
+2020-12-17 01:40:30,799 INFO    MainThread:610733 [redirect.py:_stop():292] _stop rd closed: stderr
+2020-12-17 01:40:30,799 INFO    MainThread:610733 [redirect.py:uninstall():227] uninstall done

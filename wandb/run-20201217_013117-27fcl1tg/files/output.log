@@ -1,0 +1,22 @@
+2020-12-17 01:31:18.645 INFO:	gpus = [0]
+2020-12-17 01:31:18.725 INFO:	gpu device = 0
+2020-12-17 01:31:18.725 INFO:	args = Namespace(arch_learning_rate=0.0003, arch_search_method='DARTS', arch_weight_decay=0.001, batch_size=64, cutout=False, cutout_length=16, data='../data', drop_path_prob=0.3, early_stopping=0, epochs=50, gpu='0', grad_clip=5, group_id=2021, init_channels=16, lambda_train_regularizer=1.0, lambda_valid_regularizer=1.0, layers=8, learning_rate=0.025, learning_rate_min=0.001, model_path='saved_models', momentum=0.9, optimization='V2', report_freq=50, run_id=200003, save='search-EXP-20201217-013117', seed=2, train_portion=0.5, unrolled=True, w_update_times=1, weight_decay=0.0003)
+2020-12-17 01:31:20.597 INFO:	param size = 1.930842MB
+Files already downloaded and verified
+/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/torch/optim/lr_scheduler.py:508: UserWarning: To get the last learning rate computed by the scheduler, please use `get_last_lr()`.
+  warnings.warn("To get the last learning rate computed by the scheduler, "
+2020-12-17 01:31:21.258 INFO:	epoch 0 lr 2.500000e-02
+2020-12-17 01:31:23.868 INFO:	train 000 2.475696e+00 9.375000 43.750000
+2020-12-17 01:32:35.039 INFO:	train 050 2.005837e+00 25.704657 79.473039
+Traceback (most recent call last):
+  File "./search_algorithm/train_milenas.py", line 350, in <module>
+    main()
+  File "./search_algorithm/train_milenas.py", line 183, in main
+    train_acc, train_obj, train_loss = train(epoch, train_queue, valid_queue, model, architect, criterion, optimizer, lr)
+  File "./search_algorithm/train_milenas.py", line 303, in train
+    loss.backward()
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/torch/tensor.py", line 221, in backward
+    torch.autograd.backward(self, gradient, retain_graph, create_graph)
+  File "/home/chaoyanghe/miniconda/envs/milenas/lib/python3.8/site-packages/torch/autograd/__init__.py", line 130, in backward
+    Variable._execution_engine.run_backward(
+KeyboardInterrupt
