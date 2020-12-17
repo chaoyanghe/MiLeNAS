@@ -15,6 +15,8 @@ This is the source code for the following paper:
 Arxiv link: https://arxiv.org/abs/2003.12238
 
 ## Installation
+Core library versions: `Python 3.8.5`, `PyTorch 1.7.1`
+
 For Linux OS:
 
 ```
@@ -32,7 +34,7 @@ pip install -r requirements.txt
 ```
 
 
-NOTE: PyTorch > 1.0 is supported.
+NOTE: PyTorch 1.7 is supported.
 
 ## Datasets
 For CIFAR10, it will be automatically downloaded.
